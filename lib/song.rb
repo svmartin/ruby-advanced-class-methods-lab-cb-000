@@ -48,6 +48,7 @@ class Song
     artist_and_song.map { |e| e.gsub(" ", "")}
     song.artist_name = artist_and_song.first
     song.name = artist_and_song.last
+    song
   end
 
   def self.create_from_filename(filename)
