@@ -33,6 +33,10 @@ class Song
     end
   end
 
+  def self.alphabetical
+    self.all.sort_by { |song| song.name.downcase }
+  end
+
   def self.all
     @@all
   end
