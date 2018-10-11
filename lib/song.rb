@@ -46,7 +46,7 @@ class Song
     file = File.basename(filename, ".*")
     artist_and_song = file.split("-")
     artist_and_song.map { |e| e.gsub(" ", "")}
-    song.artist = artist_and_song.first
+    song.artist_name = artist_and_song.first
     song.name = artist_and_song.last
   end
 
