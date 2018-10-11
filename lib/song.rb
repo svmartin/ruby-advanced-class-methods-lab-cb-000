@@ -41,6 +41,14 @@ class Song
     self.all.clear
   end
 
+  def self.new_from_filename(filename)
+    #
+  end
+
+  def self.create_from_filename(filename)
+    #
+  end
+
   def self.all
     @@all
   end
