@@ -37,6 +37,10 @@ class Song
     self.all.sort_by { |song| song.name.downcase }
   end
 
+  def self.destroy_all
+    self.all.clear
+  end
+
   def self.all
     @@all
   end
