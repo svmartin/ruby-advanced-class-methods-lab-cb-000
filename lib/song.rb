@@ -47,7 +47,6 @@ class Song
     artist_and_song = file.split("-")
     song.artist_name = artist_and_song.first.strip
     song.name = artist_and_song.last.strip
-    song
   end
 
   def self.create_from_filename(filename)
