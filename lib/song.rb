@@ -44,8 +44,10 @@ class Song
   def self.new_from_filename(filename)
     song = self.new
     file = File.basename(filename, ".*")
-    song.artist_name, song.name = file.split("-")
-    song
+    artist_and_song = file.split("-")
+    artist_and_song.map { |e| e.gsub(" ", "")}
+    song.artist = artist_and_song.first
+    song.name = artist_and_song.last
   end
 
   def self.create_from_filename(filename)
